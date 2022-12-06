@@ -1,0 +1,14 @@
+version: "3"
+networks:
+  default:
+    driver: bridge
+
+services:
+  mongodb:
+    image: mongo
+    hostname: mongodb.chinese-checkers.dev
+    container_name: mongodb.chinese-checkers.dev
+    ports:
+      - 27017:27017
+    environment:
+      MONGODB_DATABASE: chinese-checkers
